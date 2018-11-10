@@ -1,0 +1,106 @@
+{% extends 'base.html' %}
+
+{% block styles %}
+<style>
+    .jumbotron {
+        text-align: center;
+        color: rgb(178, 197, 197) !important;
+    }
+
+    .form-column {
+    padding: 25px;
+    }
+
+    .second-column {
+    width: 40%;
+    float: right;
+    padding: 25px;
+    }
+
+</style>
+{% endblock %}
+
+{% block jumbotron %}
+<div class="jumbotron" style="background-color:rgb(66, 133, 244)">
+    <h1 class="white-text center-text-align">Put those vendibles up for sale. It's Free!!!</h1>
+</div> 
+{% endblock %}
+
+{% block content %}
+<!--Section: Contact-->
+<section id="Place an Ad">
+    {% if confirm_message %}
+    <h2>{{ title }}</h2>
+    <p>{{ confirm_message }}</p>
+    {% endif %}
+
+
+    <!--Grid row-->
+
+    <!--Grid column-->
+    
+        <!-- Form contact -->
+    <a href="{% url 'sell' %}"></a>
+        <form method="post" action="/sell/" class="p-5 grey-text">
+        {% csrf_token %}
+        <div class="row container-fluid">
+            <div class="col-xs-4 form-column">
+                {{ form.non_field_errors }}
+                <div class="md-form form-sm fieldWrapper"> <i class="fa fa-tag prefix"></i>
+                {{ form.name.errors }}
+                <label for="form.name">Item name</label>
+                {{ form.name }}
+                </div>
+                <!--Category-->
+                <!--Slug-->
+                <div class="md-form form-sm fieldWrapper"> <i class="fa fa-pencil prefix"></i>
+                {{ form.description.errors }}
+                <label for="form.description">Description</label>
+                {{ form.description }}
+                </div>
+                <div class="md-form form-sm fieldWrapper"> <i class="fa fa-money prefix"></i>
+                {{ form.price.errors }}
+                <label for="form.price">Price</label>
+                {{ form.price }}
+                </div>
+
+            </div>
+            <div class="col-xs-4 form-column">
+                <div class="md-form form-sm fieldWrapper"> <i class="fa fa-user prefix"></i>
+                {{ form.name.errors }}
+                <label for="form.name">Your name</label>
+                {{ form.name }}
+                </div>
+
+                <div class="md-form form-sm fieldWrapper"> <i class="fa fa-envelope prefix"></i>
+                {{ form.name.errors }}
+                <label for="form.email">Your email</label>
+                {{ form.email }}
+                </div>
+
+                <div class="md-form form-sm fieldWrapper"> <i class="fa fa-phone prefix"></i>
+                {{ form.phone.errors }}
+                <label for="form.email">Your Phone</label>
+                {{ form.phone }}
+                </div>
+ 
+            </div>
+            <div class="col-xs-4 form-column">
+                <h2 class="grey-text">Upload Image</h2>
+                <p>should be of .png, .jpg or .jpeg format</p>
+                
+                <div class="upload-btn-wrapper">
+                    <input type="file" name="myfile" />
+                </div>
+                <div class="text-center mt-4">
+                <input type="submit" name="Send" class="btn btn-primary"><i class="fa fa-paper-plane-o ml-1"></i>
+                </div>
+            </div>
+        </div>
+        </form>
+        <!-- Form contact -->
+    <!--Grid column-->
+
+</section>
+<!--Section: Contact-->
+{% endblock %}

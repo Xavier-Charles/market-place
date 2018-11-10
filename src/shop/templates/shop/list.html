@@ -1,0 +1,26 @@
+<div id="sidebar">
+    <h3>Categories</h3>
+    <ul>
+        <li {% if not category %} class="selected"{% endif %}>
+            <a href="{% url "products:product_list" %}">All</a>
+        </li>
+    {% for c in categories %}
+        <li>
+            <a href="{{ c.get_absolute_url }}">{{ c.name }}</a>
+        </li>
+    {% endfor %}
+    </ul>
+</div>
+
+<div id="main" class="product-list">
+    <h1> {% if category %}{{ category.name }}{% else %}Products{% end if %}</h1>
+    {% for product in products %}
+        <div class="item">
+            <a href="{{ product.get_absolute_url }}">
+                <img src="{{ product.image.url }}">
+            </a>
+            <a href="{{ product.get_absolute_url }}">{{ product.name }}</a><br>
+            ${{ product.item_price }}
+        </div>
+    {% endfor %}
+</div>

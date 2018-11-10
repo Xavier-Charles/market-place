@@ -1,0 +1,191 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% include 'bg_image.html' %}
+
+
+  <!--Main layout-->
+  <main class="mt-5">
+    <div class="container">
+
+      <!--Section: Best Features-->
+      <section id="best-features" class="text-center">
+
+        <!-- Heading -->
+        <h2 class="mb-5 font-weight-bold">Why our customers love us!</h2>
+      
+        <!--Grid row-->
+        <div class="row d-flex justify-content-center mb-4">
+      
+            <!--Grid column-->
+            <div class="col-md-8">
+      
+                <!-- Description -->
+                <p class="grey-text">We believe Buying, Selling or Trading should be done with ease, it should be hassle-free. 
+                    This is the goal and we are winning everyday.
+                </p>
+      
+            </div>
+            <!--Grid column-->
+      
+        </div>
+        <!--Grid row-->
+      
+        <!--Grid row-->
+        <div class="row">
+      
+            <!--Grid column-->
+            <div class="col-md-4 mb-1">
+                <i class="fa fa-camera-retro fa-3x orange-text"></i>
+                <h4 class="my-4">Experience</h4>
+                <p class="grey-text">Our customers love us because of our simplicity, Intergrity, We keep our word.</p>
+            </div>
+            <!--Grid column-->
+      
+            <!--Grid column-->
+            <div class="col-md-4 mb-1">
+                <i class="fa fa-heart fa-3x pink-text"></i>
+                <h4 class="my-4">Happiness</h4>
+                <p class="grey-text">Our customers sell on their terms. We remain just the means for you to make that sale.</p>
+            </div>
+            <!--Grid column-->
+      
+            <!--Grid column-->
+            <div class="col-md-4 mb-1">
+                <i class="fa fa-bicycle fa-3x orange-text"></i>
+                <h4 class="my-4">Speed</h4>
+                <p class="grey-text">We deliver fast. We get you customers sooner than you think.</p>
+            </div>
+            <!--Grid column-->
+      
+        </div>
+        <!--Grid row-->
+      
+      </section>
+      <!--Section: Best Features-->
+
+      <hr class="my-5">
+
+      <!--Section: Examples-->
+      <section id="Top products this week" class="text-center">
+
+          <h2 class="mb-5 font-weight-bold">Top products this week</h2>
+
+          <!--Grid row-->
+          <div class="row">
+
+              <!--Grid column-->
+              <div class="col-lg-4 col-md-12 mb-4">
+
+                  <div class="view overlay z-depth-1-half">
+                    <img src="./img/Sample_Ads_imgs/img- bag-min.jpg" class="img-fluid">
+                    <a href="#!">
+                      <div class="mask rgba-white-slight"></div>
+                    </a>
+                  </div>
+
+                  <h4 class="my-4 font-weight-bold">1,000</h4>
+                  <p class="grey-text">Classic portable bags.</p>
+      
+              </div>
+              
+              <!--Grid column-->
+      
+              <!--Grid column-->
+              <div class="col-lg-4 col-md-12 mb-4">
+
+                  <div class="view overlay z-depth-1-half">
+                    <img src="./img/Sample_Ads_imgs/img-Tecno-min.jpg" class="img-fluid">
+                    <a href="#!">
+                      <div class="mask rgba-white-slight"></div>
+                    </a>
+                  </div>
+                  <h4 class="my-4 font-weight-bold">26,500</h4>
+                  <p class="grey-text">Tecno spark K7 Blue .</p>
+      
+              </div>
+
+              <!--Grid column-->
+      
+              <!--Grid column-->
+              <div class="col-lg-4 col-md-12 mb-4">
+
+                  <div class="view overlay z-depth-1-half">
+                    <img src="./img/Sample_Ads_imgs/img-iphone6s-min.jpg" class="img-fluid">
+                    <a href="#!">
+                      <div class="mask rgba-white-slight"></div>
+                    </a>
+                  </div>
+                  <h4 class="my-4 font-weight-bold">55,000</h4>
+                  <p class="grey-text">Apple Iphone 6s with 32 gig in-builtmemory.</p>
+      
+              </div>
+
+              <!--Grid column-->
+      
+          </div>
+          <!--Grid row-->
+      
+          <!--Grid row-->
+          <div class="row">
+      
+              <!--Grid column-->
+              <div class="col-lg-4 col-md-12 mb-4">
+
+                  <div class="view overlay z-depth-1-half">
+                    <img src="./img/Sample_Ads_imgs/img-rooms-min.jpg" class="img-fluid">
+                    <a href="#!">
+                      <div class="mask rgba-white-slight"></div>
+                    </a>
+                  </div>
+                  <h4 class="my-4 font-weight-bold">80,000</h4>
+                  <p class="grey-text">Spacious rooms Self-cotain</p>
+      
+              </div>
+              <!--Grid column-->
+      
+              <!--Grid column-->
+              <div class="col-lg-4 col-md-12 mb-4">
+
+                  <div class="view overlay z-depth-1-half">
+                    <img src="./img/Sample_Ads_imgs/img-car-min.jpg" class="img-fluid">
+                    <a href="#!">
+                      <div class="mask rgba-white-slight"></div>
+                    </a>
+                  </div>
+                  <h4 class="my-4 font-weight-bold">2,550,000</h4>
+                  <p class="grey-text">Toyota Corolla Gold 2013 model.</p>
+      
+              </div>
+              <!--Grid column-->
+      
+              <!--Grid column-->
+              <div class="col-lg-4 col-md-12 mb-4">
+
+                  <div class="view overlay z-depth-1-half">
+                    <img src="./img/Sample_Ads_imgs/img-solar-min.jpg" class="img-fluid">
+                    <a href="#!">
+                      <div class="mask rgba-white-slight"></div>
+                    </a>
+                  </div>
+                  <h4 class="my-4 font-weight-bold">45,000</h4>
+                  <p class="grey-text">40W-Solar panels</p>
+      
+              </div>
+              <!--Grid column-->
+      
+          </div>
+          <!--Grid row-->
+
+          <a class="font-weight-bold grey-text" href="{% url 'inventory' %}">Find more >></a>
+      
+      </section>
+      <!--Section: Examples-->
+
+    </div>
+  </main>
+  <!--Main layout-->
+
+{% endblock %}
+
+  
